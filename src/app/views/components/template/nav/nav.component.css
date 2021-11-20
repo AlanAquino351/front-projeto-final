@@ -1,0 +1,25 @@
+.container {
+    height: 83%;
+}
+
+.container button {
+    background-color: #FAFAFA;
+    border-width: 0.5px;
+    border-color: #c5c5c5;
+    margin: 1rem auto 0 1rem;
+    padding: 0.1rem 0.3rem 0.0rem 0.3rem;
+    border-radius: 5px;
+}
+
+.container button:hover {
+    background-color: rgb(190, 190, 190);
+    border-color: #549F93;
+}
+
+.container i {
+    margin-right: 1rem;
+}
+
+.container a {
+    margin-right: 2rem;
+}
