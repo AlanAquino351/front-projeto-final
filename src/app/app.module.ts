@@ -10,11 +10,18 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { HttpClientModule } from '@angular/common/http';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 import { HeaderComponent } from './views/components/template/header/header.component';
 import { FooterComponent } from './views/components/template/footer/footer.component';
 import { NavComponent } from './views/components/template/nav/nav.component';
 import { HomeComponent } from './views/components/home/home.component';
+import { ClienteReadComponent } from './views/components/cliente/cliente-read/cliente-read.component';
+import { ClienteCreateComponent } from './views/components/cliente/cliente-create/cliente-create.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,9 @@ import { HomeComponent } from './views/components/home/home.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    ClienteReadComponent,
+    ClienteCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +41,12 @@ import { HomeComponent } from './views/components/home/home.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    HttpClientModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

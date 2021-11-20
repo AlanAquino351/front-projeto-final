@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+}
+
+.create {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.create h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.create button {
+    width: 100%;
+    height: 2rem;
+    margin: 1rem auto;
+}
