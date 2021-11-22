@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://projeto-mudefacil.herokuapp.com'
+  baseUrl: 'https://project-mudefacil.herokuapp.com'
 };
 
 /*
