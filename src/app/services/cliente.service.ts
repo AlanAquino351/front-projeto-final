@@ -22,11 +22,8 @@ export class ClienteService {
   }
 
   findById(id : any): Observable<Cliente>{
-
     const url = `${this.baseUrl}/clientes/${id}`;
-
     return this.http.get<Cliente>(url);
-
   }
 
   create(cliente: Cliente):Observable<Cliente> {
@@ -35,20 +32,13 @@ export class ClienteService {
   }
 
   update(cliente: Cliente): Observable<Cliente> {
-
     const url = `${this.baseUrl}/clientes/${cliente.id}`;
     return this.http.put<Cliente>(url, cliente);
-
-
   }
 
   delete(id : any):Observable<void> {
-
     const url = `${this.baseUrl}/clientes/${id}`;
     return this.http.delete<void>(url);
-
-
-
   }
 
   message(msg : string): void {

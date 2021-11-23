@@ -8,6 +8,7 @@
     border-color: #c5c5c5;
     margin: 1rem auto 0 1rem;
     border-radius: 5px;
+    padding: 0%;
 }
 
 .container button:hover {
@@ -21,4 +22,9 @@
 
 .container a {
     margin-right: 2rem;
+}
+
+.icon {
+    font-size: 40px !important;
+    margin-right: 100% !important;
 }

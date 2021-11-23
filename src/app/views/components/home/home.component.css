@@ -11,3 +11,12 @@ mat-card-subtitle {
 mat-card-title {
     margin-top: 1rem;
 }
+
+.mat-card-header .mat-card-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+mat-card-subtitle[_ngcontent-sph-c153] {
+    font-size: 20px;
+}

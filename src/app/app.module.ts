@@ -29,6 +29,8 @@ import { ClienteCreateComponent } from './views/components/cliente/cliente-creat
 import { ClienteUpdateComponent } from './views/components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './views/components/cliente/cliente-delete/cliente-delete.component';
 
+import { NgxMaskModule} from 'ngx-mask'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +61,8 @@ import { ClienteDeleteComponent } from './views/components/cliente/cliente-delet
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

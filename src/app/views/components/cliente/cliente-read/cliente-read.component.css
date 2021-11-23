@@ -27,9 +27,28 @@ table {
 }
 
 #edit {
-    color: rgb(218, 233, 12);
+    color: rgba(101, 135, 135, 1);
+    margin-right: 1rem;
 }
 
 #delete {
     color: red;
+}
+
+th {
+    font-size: 1.2em !important;
+    color: black;
+}
+
+table {
+    text-align: center !important;
+}
+
+th.mat-header-cell {
+    text-align: center;
+}
+
+.mat-cell,
+.mat-footer-cell {
+    font-size: 16px;
 }
