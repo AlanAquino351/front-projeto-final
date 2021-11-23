@@ -1,7 +1,7 @@
 <div></div>
 
 <form class="form class= mat-elevation-z8 ">
-    <h1>Criando Novo Cliente</h1>
+    <h1>Atualizando Cliente</h1>
     <mat-form-field class="full-width">
         <mat-label>Nome</mat-label>
         <input [(ngModel)]="cliente.nome" [formControl]="nome" required name="nome" maxlength="60" matInput placeholder="Ex. Alan Aquino">
@@ -20,6 +20,6 @@
         <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
     </mat-form-field>
 
-    <button type="button" class="mat-elevation-z8" (click)="create()" [disabled]="errorValidNome() || errorValidCpf() || errorValidTelefone()" mat-stroked-button color="basic">CRIAR</button>
+    <button type="button" class="mat-elevation-z8" (click)="update()" [disabled]="errorValidNome() || errorValidCpf() || errorValidTelefone()" mat-stroked-button color="basic">ATUALIZAR</button>
     <button type="button" class="mat-elevation-z8" (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
 </form>
