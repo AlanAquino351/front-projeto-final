@@ -26,8 +26,8 @@ export class ClienteService {
     return this.http.post<Cliente>(url, cliente);
   }
 
-  message(msg : String): void {
-    this.snack.open('${msg}', 'ok', {
+  message(msg : string): void {
+    this.snack.open(msg, 'ok', {
       horizontalPosition: 'end',
       verticalPosition: 'top',
       duration: 6000

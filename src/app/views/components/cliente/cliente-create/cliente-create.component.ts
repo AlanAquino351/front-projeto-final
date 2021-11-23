@@ -22,7 +22,7 @@ export class ClienteCreateComponent implements OnInit {
     private service: ClienteService) { }
 
   ngOnInit(): void {
-    
+    console.log('Init')
   }
 
   cancel():void {
@@ -30,14 +30,15 @@ export class ClienteCreateComponent implements OnInit {
   }
 
   create():void {
-    this.service.create(this.cliente).subscribe((resposta) =>{
+    console.log('Creating')
+    this.service.create(this.cliente).subscribe((resposta) => {      
       this.router.navigate(['clientes'])
       this.service.message('Cliente cadastrado com Sucesso! :)')
     }, err => {
-      console.log(err)
+      console.log(err);
+
+      console.log('Log', err.error.error);
+      this.service.message(err.error.error);
     })
   }
-
-
-
 }
