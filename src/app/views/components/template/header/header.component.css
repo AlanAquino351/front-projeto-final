@@ -1,18 +1,36 @@
 .header {
     height: 10%;
     display: flex;
-    align-items: left;
-    justify-content: left;
     background-color: #549F93;
+    margin-bottom: 3rem;
 }
 
 .header .logo {
     display: flex;
     width: 50%;
-    padding: 10% 10% 10% 1%;
+    padding: 3% 3% 3% 1%;
+    float: left;
 }
 
 .header .logo img {
-    width: 35%;
-    height: 35%;
+    width: 40%;
+    height: 40%;
+}
+
+.header .menu {
+    display: flex;
+    width: 70%;
+}
+
+.header .menu a {
+    margin-right: 3rem;
+    color: #202020 !important;
+    text-decoration: none !important;
+    font-size: 1.6rem;
+    float: left;
+}
+
+.header .menu a:hover {
+    text-decoration: underline !important;
+    color: #363636 !important;
 }
