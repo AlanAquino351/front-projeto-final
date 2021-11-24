@@ -1,8 +1,7 @@
 .header {
     height: 10%;
     display: flex;
-    background-color: #549F93;
-    margin-bottom: 3rem;
+    background-color: #E88D67;
 }
 
 .header .logo {
@@ -22,8 +21,31 @@
     width: 70%;
 }
 
+.navigation ul li {
+    list-style: none;
+}
+
+.navigation ul li a {
+    display: flex;
+}
+
+.navigation ul li a .icon {
+    text-align: center;
+    line-height: 70px;
+    margin-right: 0.1rem;
+}
+
+.navigation ul li a .icon mat-icon {
+    font-size: 1.8rem;
+}
+
+.navigation ul li a .list {
+    padding-left: 10px;
+    line-height: 60px;
+}
+
 .header .menu a {
-    margin-right: 3rem;
+    margin-right: 2rem;
     color: #202020 !important;
     text-decoration: none !important;
     font-size: 1.6rem;
@@ -31,6 +53,5 @@
 }
 
 .header .menu a:hover {
-    text-decoration: underline !important;
-    color: #363636 !important;
+    color: #ffffff !important;
 }

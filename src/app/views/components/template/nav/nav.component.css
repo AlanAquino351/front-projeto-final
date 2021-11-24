@@ -1,3 +1,5 @@
 .container {
     height: 83%;
+    background-image: url(/assets/img/fundo7.jpg);
+    background-size: cover;
 }

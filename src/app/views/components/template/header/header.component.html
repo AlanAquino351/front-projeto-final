@@ -3,11 +3,19 @@
         <img src="/assets/img/logo.png" alt="">
     </div>
     <div class="menu">
-        <a routerLink="/">
-           Home
-        </a>
-        <a routerLink="/clientes">
-           Cliente
-        </a>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a routerLink="/">
+                        <span class="icon"><mat-icon>home</mat-icon></span>
+                        <span class="list">Home</span>
+                    </a>
+                    <a routerLink="/clientes">
+                        <span class="icon"><mat-icon>person</mat-icon></span>
+                        <span class="list">Cliente</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </mat-toolbar>
