@@ -6,19 +6,19 @@
 
 .header .logo {
     display: flex;
-    width: 50%;
+    width: 40%;
     padding: 3% 3% 3% 1%;
     float: left;
 }
 
 .header .logo img {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
 }
 
 .header .menu {
     display: flex;
-    width: 70%;
+    width: 60%;
 }
 
 .navigation ul li {

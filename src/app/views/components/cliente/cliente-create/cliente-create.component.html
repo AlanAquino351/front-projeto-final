@@ -1,25 +1,25 @@
-<div></div>
+<div class="container">
+    <form class="form class= mat-elevation-z8 ">
+        <h1>Criando Novo Cliente</h1>
+        <mat-form-field class="full-width">
+            <mat-label>Nome</mat-label>
+            <input [(ngModel)]="cliente.nome" [formControl]="nome" required name="nome" maxlength="60" matInput placeholder="Ex. Alan Aquino">
+            <mat-error *ngIf="nome.invalid">{{ errorValidNome() }}</mat-error>
+        </mat-form-field>
 
-<form class="form class= mat-elevation-z8 ">
-    <h1>Criando Novo Cliente</h1>
-    <mat-form-field class="full-width">
-        <mat-label>Nome</mat-label>
-        <input [(ngModel)]="cliente.nome" [formControl]="nome" required name="nome" maxlength="60" matInput placeholder="Ex. Alan Aquino">
-        <mat-error *ngIf="nome.invalid">{{ errorValidNome() }}</mat-error>
-    </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>CPF</mat-label>
+            <input type="text" mask="000.000.000-00" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.cpf" name="cpf" [formControl]="cpf" required name="cpf" maxlength="15" matInput placeholder="Ex. 000.000.000-00">
+            <mat-error *ngIf="cpf.invalid">{{ errorValidCpf() }}</mat-error>
+        </mat-form-field>
 
-    <mat-form-field class="full-width">
-        <mat-label>CPF</mat-label>
-        <input type="text" mask="000.000.000-00" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.cpf" name="cpf" [formControl]="cpf" required name="cpf" maxlength="15" matInput placeholder="Ex. 000.000.000-00">
-        <mat-error *ngIf="cpf.invalid">{{ errorValidCpf() }}</mat-error>
-    </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>Telefone</mat-label>
+            <input type="text" mask="(00) 0000-0000 || (00) 0 0000-0000" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.telefone" name="telefone" [formControl]="telefone" required name="telefone" maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
+            <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
+        </mat-form-field>
 
-    <mat-form-field class="full-width">
-        <mat-label>Telefone</mat-label>
-        <input type="text" mask="(00) 0000-0000 || (00) 0 0000-0000" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.telefone" name="telefone" [formControl]="telefone" required name="telefone" maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
-        <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
-    </mat-form-field>
-
-    <button type="button" (click)="create()" [disabled]="errorValidNome() || errorValidCpf() || errorValidTelefone()" mat-stroked-button color="basic">CRIAR</button>
-    <button type="button" (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
-</form>
+        <button type="button" (click)="create()" [disabled]="errorValidNome() || errorValidCpf() || errorValidTelefone()" mat-stroked-button color="basic">CRIAR</button>
+        <button type="button" (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
+    </form>
+</div>

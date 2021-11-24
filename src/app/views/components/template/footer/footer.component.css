@@ -2,14 +2,14 @@
     height: 7%;
     position: fixed;
     bottom: 0;
-    background-color: #B8DBD9;
+    background-color: #8f8f8f;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .footer p {
-    color: #787a7a;
+    color: #d8d8d8;
     font-size: 0.9rem;
     margin: 0;
 }

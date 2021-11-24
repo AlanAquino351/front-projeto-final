@@ -24,3 +24,7 @@ mat-card-title {
 mat-card-subtitle[_ngcontent-sph-c153] {
     font-size: 20px;
 }
+
+mat-card {
+    border-radius: 0.5rem;
+}
