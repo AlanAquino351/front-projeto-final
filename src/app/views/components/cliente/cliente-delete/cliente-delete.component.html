@@ -12,6 +12,11 @@
         </mat-form-field>
 
         <mat-form-field class="full-width">
+            <mat-label>Idade</mat-label>
+            <input [(ngModel)]="cliente.idade" name="idade" disabled maxlength="3" matInput placeholder="Ex. 27 anos">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
             <mat-label>Celular/Telefone</mat-label>
             <input [(ngModel)]="cliente.telefone" name="telefone" disabled maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
         </mat-form-field>

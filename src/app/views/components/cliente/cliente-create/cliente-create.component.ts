@@ -15,13 +15,14 @@ export class ClienteCreateComponent implements OnInit {
     id: '',
     nome: '',
     cpf: '',
-    telefone: ''
+    telefone: '',
+    idade: '',
   }
 
   nome = new FormControl('',[Validators.minLength(5)])
   cpf = new FormControl('',[Validators.minLength(11)])
   telefone = new FormControl('',[Validators.minLength(10)])
-
+  idade = new FormControl('',[Validators.minLength(2)])
 
   constructor(
     private router : Router,
@@ -64,10 +65,18 @@ export class ClienteCreateComponent implements OnInit {
     return false;
   }
 
+  errorValidIdade() {
+    if (this.idade.invalid) {
+      return 'O campo deve ter entre 2 a 3 caracteres'
+    }    
+    return false;
+  }
+
   errorValidTelefone() {
     if (this.telefone.invalid) {
       return 'O campo deve ter entre 10 a 11 caracteres'
     }
     return false;
   }
+
 }

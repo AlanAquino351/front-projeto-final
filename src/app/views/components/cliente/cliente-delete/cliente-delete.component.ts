@@ -17,7 +17,8 @@ export class ClienteDeleteComponent implements OnInit {
     id: '',
     nome: '',
     cpf: '',
-    telefone: ''
+    telefone: '',
+    idade: ''
   }
 
   constructor(
