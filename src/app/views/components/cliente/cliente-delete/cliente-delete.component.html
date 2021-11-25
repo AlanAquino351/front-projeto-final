@@ -8,12 +8,12 @@
 
         <mat-form-field class="full-width">
             <mat-label>CPF</mat-label>
-            <input [(ngModel)]="cliente.cpf" name="cpf" name="cpf" disabled maxlength="15" matInput placeholder="Ex. 000.000.000-00">
+            <input [(ngModel)]="cliente.cpf" name="cpf" disabled maxlength="15" matInput placeholder="Ex. 000.000.000-00">
         </mat-form-field>
 
         <mat-form-field class="full-width">
-            <mat-label>Telefone</mat-label>
-            <input [(ngModel)]="cliente.telefone" name="telefone" name="telefone" disabled maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
+            <mat-label>Celular/Telefone</mat-label>
+            <input [(ngModel)]="cliente.telefone" name="telefone" disabled maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
         </mat-form-field>
 
         <button type="button" class="mat-elevation-z8" (click)="delete()" mat-stroked-button color="basic">DELETAR</button>

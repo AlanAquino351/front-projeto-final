@@ -9,13 +9,13 @@
 
         <mat-form-field class="full-width">
             <mat-label>CPF</mat-label>
-            <input [(ngModel)]="cliente.cpf" name="cpf" [formControl]="cpf" required name="cpf" maxlength="15" matInput placeholder="Ex. 000.000.000-00">
+            <input [(ngModel)]="cliente.cpf" name="cpf" [formControl]="cpf" required maxlength="15" matInput placeholder="Ex. 000.000.000-00">
             <mat-error *ngIf="cpf.invalid">{{ errorValidCpf() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
-            <mat-label>Telefone</mat-label>
-            <input [(ngModel)]="cliente.telefone" name="telefone" [formControl]="telefone" required name="telefone" maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
+            <mat-label>Celular/Telefone</mat-label>
+            <input [(ngModel)]="cliente.telefone" name="telefone" [formControl]="telefone" required maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
             <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
         </mat-form-field>
 
