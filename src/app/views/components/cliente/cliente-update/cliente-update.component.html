@@ -9,23 +9,23 @@
 
         <mat-form-field class="full-width">
             <mat-label>CPF</mat-label>
-            <input [(ngModel)]="cliente.cpf" name="cpf" [formControl]="cpf" required maxlength="15" matInput placeholder="Ex. 000.000.000-00">
+            <input [(ngModel)]="cliente.cpf" mask="000.000.000-00" [dropSpecialCharacters]=" false " name="cpf" [formControl]="cpf" required maxlength="15" matInput placeholder="Ex. 000.000.000-00 (apenas os números)">
             <mat-error *ngIf="cpf.invalid">{{ errorValidCpf() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
             <mat-label>Data de Nascimento</mat-label>
-            <input type="text" [(ngModel)]="cliente.dataNascimento" name="dataNascimento" [formControl]="dataNascimento" required maxlength="10" matInput placeholder="Apenas os números">
+            <input type="text" [(ngModel)]="cliente.dataNascimento" mask="d0/M0/0000" [dropSpecialCharacters]=" false " name="dataNascimento" [formControl]="dataNascimento" required maxlength="10" matInput placeholder="Ex. 00/00/0000 (apenas os números)">
             <mat-error *ngIf="dataNascimento.invalid">{{ errorValidDataNascimento() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
             <mat-label>Celular/Telefone</mat-label>
-            <input type="text" [(ngModel)]="cliente.telefone" name="telefone" [formControl]="telefone" required maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
+            <input type="text" [(ngModel)]="cliente.telefone" mask="(00) 0000-0000 || (00) 0 0000-0000" [dropSpecialCharacters]=" false " name="telefone" [formControl]="telefone" required maxlength="18" matInput placeholder="Ex. (00) 90000-0000 (apenas os números)">
             <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
         </mat-form-field>
 
-        <button type="button" class="mat-elevation-z8" (click)="update()" [disabled]="errorValidNome() || errorValidCpf() || errorValidTelefone()" mat-stroked-button color="basic">ATUALIZAR</button>
+        <button type="button" class="mat-elevation-z8" (click)="update()" [disabled]="errorValidNome() || errorValidCpf() || errorValidDataNascimento() || errorValidTelefone()" mat-stroked-button color="basic">ATUALIZAR</button>
         <button type="button" class="mat-elevation-z8" (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
     </form>
 </div>

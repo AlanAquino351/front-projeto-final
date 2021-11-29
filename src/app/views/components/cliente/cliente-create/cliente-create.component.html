@@ -9,19 +9,19 @@
 
         <mat-form-field class="full-width">
             <mat-label>CPF</mat-label>
-            <input type="text" mask="000.000.000-00" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.cpf" name="cpf" [formControl]="cpf" required maxlength="15" matInput placeholder="Ex. 000.000.000-00">
+            <input type="text" mask="000.000.000-00" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.cpf" name="cpf" [formControl]="cpf" required maxlength="15" matInput placeholder="Ex. 000.000.000-00 (apenas os números)">
             <mat-error *ngIf="cpf.invalid">{{ errorValidCpf() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
             <mat-label>Data de Nascimento</mat-label>
-            <input type="text" mask="99/99/9999" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.dataNascimento" name="dataNascimento" [formControl]="dataNascimento" required maxlength="10" matInput placeholder="Apenas os números">
+            <input type="text" mask="d0/M0/0000" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.dataNascimento" name="dataNascimento" [formControl]="dataNascimento" required maxlength="10" matInput placeholder="Ex. 00/00/0000 (apenas os números)">
             <mat-error *ngIf="dataNascimento.invalid">{{ errorValidDataNascimento() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
             <mat-label>Celular/Telefone</mat-label>
-            <input type="text" mask="(00) 0000-0000 || (00) 0 0000-0000" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.telefone" name="telefone" [formControl]="telefone" required maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
+            <input type="text" mask="(00) 0000-0000 || (00) 0 0000-0000" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.telefone" name="telefone" [formControl]="telefone" required maxlength="18" matInput placeholder="Ex. (00) 90000-0000 (apenas os números)">
             <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
         </mat-form-field>
 
