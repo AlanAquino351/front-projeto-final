@@ -3,7 +3,7 @@
         <h1>Cadastro de Cliente</h1>
         <mat-form-field class="full-width">
             <mat-label>Nome</mat-label>
-            <input [(ngModel)]="cliente.nome" [formControl]="nome" required name="nome" maxlength="60" matInput placeholder="Ex. Alan Aquino">
+            <input type="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" [(ngModel)]="cliente.nome" [formControl]="nome" required name="nome" maxlength="60" matInput placeholder="Ex. Alan Aquino">
             <mat-error *ngIf="nome.invalid">{{ errorValidNome() }}</mat-error>
         </mat-form-field>
 

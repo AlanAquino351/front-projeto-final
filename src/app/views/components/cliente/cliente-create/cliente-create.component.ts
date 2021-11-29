@@ -18,11 +18,12 @@ export class ClienteCreateComponent implements OnInit {
     telefone: '',
     dataNascimento: '',
   }
-
+ 
   nome = new FormControl('',[Validators.minLength(5)])
   cpf = new FormControl('',[Validators.minLength(11)])
   telefone = new FormControl('',[Validators.minLength(10)])
   dataNascimento = new FormControl('',[Validators.minLength(8)])
+
 
   constructor(
     private router : Router,
@@ -53,10 +54,12 @@ export class ClienteCreateComponent implements OnInit {
 
   errorValidNome() {
     if (this.nome.invalid) {
-      return 'O campo deve ter entre 5 a 60 caracteres'
-    }
+      return "O campo deve ter no minimo 5 caracteres e não é permitido caracteres especiais"
+    } 
     return false;
   }
+
+
 
   errorValidCpf() {
     if (this.cpf.invalid) {
@@ -78,5 +81,7 @@ export class ClienteCreateComponent implements OnInit {
     }
     return false;
   }
+
+ 
 
 }
