@@ -14,9 +14,9 @@
         </mat-form-field>
 
         <mat-form-field class="full-width">
-            <mat-label>Idade</mat-label>
-            <input type="text" [(ngModel)]="cliente.idade" name="idade" [formControl]="idade" required maxlength="3" matInput placeholder="Ex. 27 anos">
-            <mat-error *ngIf="idade.invalid">{{ errorValidIdade() }}</mat-error>
+            <mat-label>Data de Nascimento</mat-label>
+            <input type="text" mask="99/99/9999" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.dataNascimento" name="dataNascimento" [formControl]="dataNascimento" required maxlength="10" matInput placeholder="Apenas os números">
+            <mat-error *ngIf="dataNascimento.invalid">{{ errorValidDataNascimento() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
@@ -25,7 +25,7 @@
             <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
         </mat-form-field>
 
-        <button type="button" (click)="create()" [disabled]="errorValidNome() || errorValidCpf() || errorValidIdade() || errorValidTelefone()" mat-stroked-button color="basic">CRIAR</button>
+        <button type="button" (click)="create()" [disabled]="errorValidNome() || errorValidCpf() || errorValidDataNascimento() || errorValidTelefone()" mat-stroked-button color="basic">CRIAR</button>
         <button type="button" (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
     </form>
 </div>

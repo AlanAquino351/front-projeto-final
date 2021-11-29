@@ -10,25 +10,25 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ClienteDeleteComponent implements OnInit {
 
-  id_tec = ''
-  
+  id_cli = ''
+
 
   cliente: Cliente = {
     id: '',
     nome: '',
     cpf: '',
     telefone: '',
-    idade: ''
+    dataNascimento: ''
   }
 
   constructor(
-    private router : Router,
+    private router: Router,
     private service: ClienteService,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.id_tec = this.route.snapshot.paramMap.get('id')!
+    this.id_cli = this.route.snapshot.paramMap.get('id')!
     this.findById();
 
 
@@ -36,16 +36,16 @@ export class ClienteDeleteComponent implements OnInit {
 
   findById(): void {
 
-    this.service.findById(this.id_tec).subscribe(resposta => {
+    this.service.findById(this.id_cli).subscribe(resposta => {
 
       this.cliente = resposta;
 
     })
   }
 
-  delete():void {
-                        //id que passou na url
-    this.service.delete(this.id_tec).subscribe(resposta => {
+  delete(): void {
+    //id que passou na url
+    this.service.delete(this.id_cli).subscribe(resposta => {
 
       this.router.navigate(['clientes'])
       this.service.message('Cliente deletato com sucesso!')
@@ -54,16 +54,10 @@ export class ClienteDeleteComponent implements OnInit {
 
       console.log(err)
 
-    //  if(err.error.error.match('pussui Ordens de Serviço')) {
-
-    //    this.service.message(err.error.error);
-     
-    // }
-      
     })
   }
 
-  cancel():void {
+  cancel(): void {
     this.router.navigate(['clientes'])
   }
 

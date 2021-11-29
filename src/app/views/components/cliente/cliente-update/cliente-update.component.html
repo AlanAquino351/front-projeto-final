@@ -14,14 +14,14 @@
         </mat-form-field>
 
         <mat-form-field class="full-width">
-            <mat-label>Idade</mat-label>
-            <input type="text" [(ngModel)]="cliente.idade" name="idade" [formControl]="idade" required maxlength="3" matInput placeholder="Ex. 27 anos">
-            <mat-error *ngIf="idade.invalid">{{ errorValidIdade() }}</mat-error>
+            <mat-label>Data de Nascimento</mat-label>
+            <input type="text" [(ngModel)]="cliente.dataNascimento" name="dataNascimento" [formControl]="dataNascimento" required maxlength="10" matInput placeholder="Apenas os números">
+            <mat-error *ngIf="dataNascimento.invalid">{{ errorValidDataNascimento() }}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="full-width">
             <mat-label>Celular/Telefone</mat-label>
-            <input type="text" mask="(00) 0000-0000 || (00) 0 0000-0000" [dropSpecialCharacters]=" false " [(ngModel)]="cliente.telefone" name="telefone" [formControl]="telefone" required maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
+            <input type="text" [(ngModel)]="cliente.telefone" name="telefone" [formControl]="telefone" required maxlength="18" matInput placeholder="Ex. (00) 90000-0000">
             <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
         </mat-form-field>
 

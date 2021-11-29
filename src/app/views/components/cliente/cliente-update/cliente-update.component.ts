@@ -11,7 +11,7 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ClienteUpdateComponent implements OnInit {
 
-  id_tec = ''
+  id_cli = ''
   
 
   cliente: Cliente = {
@@ -19,13 +19,13 @@ export class ClienteUpdateComponent implements OnInit {
     nome: '',
     cpf: '',
     telefone: '',
-    idade: '',
+    dataNascimento: '',
   }
 
   nome = new FormControl('',[Validators.minLength(5)])
   cpf = new FormControl('',[Validators.minLength(5)])
   telefone = new FormControl('',[Validators.minLength(5)])
-  idade = new FormControl('',[Validators.minLength(2)])
+  dataNascimento = new FormControl('',[Validators.minLength(2)])
 
   constructor(
     private router : Router,
@@ -34,7 +34,7 @@ export class ClienteUpdateComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.id_tec = this.route.snapshot.paramMap.get('id')!
+    this.id_cli = this.route.snapshot.paramMap.get('id')!
     this.findById();
 
   }
@@ -58,7 +58,7 @@ export class ClienteUpdateComponent implements OnInit {
 
   findById(): void {
 
-    this.service.findById(this.id_tec).subscribe(resposta => {
+    this.service.findById(this.id_cli).subscribe(resposta => {
 
       this.cliente = resposta;
 
@@ -83,8 +83,8 @@ export class ClienteUpdateComponent implements OnInit {
     return false;
   }
 
-  errorValidIdade() {
-    if (this.idade.invalid) {
+  errorValidDataNascimento() {
+    if (this.dataNascimento.invalid) {
       return 'O campo deve ter entre 2 a 3 caracteres'
     }
     return false;
