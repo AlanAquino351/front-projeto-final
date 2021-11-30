@@ -21,7 +21,7 @@
 
         <mat-form-field class="full-width">
             <mat-label>Celular/Telefone</mat-label>
-            <input type="text" [(ngModel)]="cliente.telefone" mask="(00) 0000-0000 || (00) 0 0000-0000" [dropSpecialCharacters]=" false " name="telefone" [formControl]="telefone" required maxlength="18" matInput placeholder="Ex. (00) 90000-0000 (apenas os números)">
+            <input type="text" [(ngModel)]="cliente.telefone" mask="(00) 0000-0000||(00) 0 0000-0000" [dropSpecialCharacters]=" false " name="telefone" [formControl]="telefone" required maxlength="18" matInput placeholder="Ex. (00) 90000-0000 (apenas os números)">
             <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
         </mat-form-field>
 
